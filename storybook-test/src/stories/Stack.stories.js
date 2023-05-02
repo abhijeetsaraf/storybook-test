@@ -4,7 +4,7 @@ export default{
     title: "Components/Stack",
     component: Stack,
     argTypes: {
-        numberOfChildren: {type: "number", defaultValue: 4}
+        numberOfChildren: {type: "number", defaultValue:5}
     }, 
 }
 
@@ -25,9 +25,16 @@ const Template = ({numberOfChildren, ...args}) => (
         ))}
     </Stack>)
 
-export const Horizontal = Template.bind({})
-Horizontal.args = { 
+export const HorizontalStack = Template.bind({})
+HorizontalStack.args = { 
     direction: "row",
+    spacing:2,
+    wrap:false,
+}
+
+export const VerticalStack = Template.bind({})
+VerticalStack.args = { 
+    direction: "column",
     spacing:2,
     wrap:false,
 }
